@@ -233,3 +233,52 @@
     grid-template-columns: 1fr;
   }
 }
+/* ===========================
+   ROLE SELECTOR (Register page)
+=========================== */
+.role-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.role-tab {
+  padding: 12px;
+  background: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.role-tab:first-child {
+  border-right: 1.5px solid #ddd;
+}
+
+.role-tab.active {
+  background-color: #e85d26;
+  color: #fff;
+}
+
+.role-tab:hover:not(.active) {
+  background-color: #fff8f5;
+  color: #e85d26;
+}
+
+/* Vendor-only fields */
+.vendor-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vendor-fields.hidden {
+  display: none;
+}

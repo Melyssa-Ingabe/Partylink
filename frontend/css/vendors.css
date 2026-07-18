@@ -1,0 +1,160 @@
+/* ===========================
+   PAGE HEADER
+=========================== */
+.page-header {
+  background-color: #fff8f5;
+  padding: 60px 24px 40px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: #777;
+}
+
+/* ===========================
+   FILTERS
+=========================== */
+.filters-section {
+  background-color: #ffffff;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 61px;
+  z-index: 90;
+}
+
+.filters-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 140px;
+}
+
+.filter-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  background: #fff;
+  color: #1a1a1a;
+  transition: border-color 0.2s;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+  border-color: #e85d26;
+}
+
+.btn-clear {
+  padding: 10px 20px;
+  background: none;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s;
+  white-space: nowrap;
+  align-self: flex-end;
+}
+
+.btn-clear:hover {
+  border-color: #e85d26;
+  color: #e85d26;
+}
+
+/* ===========================
+   RESULTS COUNT
+=========================== */
+.results-count {
+  font-size: 14px;
+  color: #888;
+  padding: 20px 0 8px;
+}
+
+/* ===========================
+   VENDORS SECTION
+=========================== */
+.vendors-section {
+  padding: 16px 0 80px;
+}
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 8px;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: 80px 24px;
+  color: #888;
+}
+
+.no-results p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.no-results.hidden {
+  display: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 900px) {
+  .vendor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .vendor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-bar {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+}

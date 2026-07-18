@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — PartyLink</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">Party<span>Link</span></a>
+      <ul class="nav-links">
+        <li><a href="vendors.html">Browse Vendors</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- REGISTER FORM -->
+  <section class="auth-section">
+    <div class="auth-card">
+
+      <div class="auth-header">
+        <h1>Create your account</h1>
+        <p>Join PartyLink as a client or vendor</p>
+      </div>
+
+      <!-- ROLE SELECTOR -->
+      <div class="role-selector">
+        <button class="role-tab active" onclick="selectRole('client', this)">I am a Client</button>
+        <button class="role-tab" onclick="selectRole('vendor', this)">I am a Vendor</button>
+      </div>
+
+      <form class="auth-form" id="registerForm">
+
+        <input type="hidden" id="role" name="role" value="client"/>
+
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="+250 7XX XXX XXX"
+            required
+          />
+        </div>
+
+        <!-- Vendor-only fields -->
+        <div class="vendor-fields hidden" id="vendorFields">
+
+          <div class="form-group">
+            <label for="businessName">Business name</label>
+            <input
+              type="text"
+              id="businessName"
+              name="businessName"
+              placeholder="Your business name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Service category</label>
+            <select id="category" name="category">
+              <option value="">Select a category</option>
+              <option value="dj">DJ</option>
+              <option value="decoration">Decoration</option>
+              <option value="catering">Catering</option>
+              <option value="photography">Photography</option>
+              <option value="florist">Florist</option>
+              <option value="mc">MC</option>
+              <option value="transport">Transport</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">City</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="e.g. Kigali"
+            />
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="At least 8 characters"
+              required
+            />
+            <button type="button" class="toggle-password" onclick="togglePassword()">Show</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Repeat your password"
+            required
+          />
+        </div>
+
+        <div id="error-msg" class="error-msg hidden"></div>
+
+        <button type="submit" class="btn-submit">Create Account</button>
+
+        <p class="auth-switch">
+          Already have an account? <a href="login.html">Log in</a>
+        </p>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER SIMPLE -->
+  <footer class="footer-simple">
+    <p>© 2026 PartyLink. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+  <script>
+    // Role tab switching
+    function selectRole(role, btn) {
+      document.getElementById('role').value = role;
+      document.querySelectorAll('.role-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+
+      const vendorFields = document.getElementById('vendorFields');
+      if (role === 'vendor') {
+        vendorFields.classList.remove('hidden');
+      } else {
+        vendorFields.classList.add('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>
