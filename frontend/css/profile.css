@@ -1,0 +1,440 @@
+/* ===========================
+   BACK LINK
+=========================== */
+.back-link {
+  display: inline-block;
+  margin: 20px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #e85d26;
+}
+
+/* ===========================
+   PROFILE HERO
+=========================== */
+.profile-hero {
+  background-color: #fff8f5;
+  padding: 40px 0 48px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-hero-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  background-color: #e0d8d2;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 220px;
+}
+
+.profile-info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: #1a1a1a;
+  margin: 8px 0 4px;
+}
+
+.profile-location {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.profile-rating {
+  font-size: 18px;
+  color: #f0a500;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rating-score {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.rating-count {
+  font-size: 13px;
+  color: #888;
+}
+
+.profile-tagline {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* CTA box in hero (mobile/tablet) */
+.profile-cta-box {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
+  min-width: 220px;
+}
+
+/* ===========================
+   PROFILE BODY GRID
+=========================== */
+.profile-body {
+  padding: 40px 0 80px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ===========================
+   PROFILE SECTIONS
+=========================== */
+.profile-section {
+  margin-bottom: 48px;
+}
+
+.profile-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #eee;
+}
+
+.profile-section p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.review-count {
+  font-size: 16px;
+  color: #888;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  gap: 16px;
+  transition: border-color 0.2s;
+}
+
+.service-item:hover {
+  border-color: #e85d26;
+}
+
+.service-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.service-info p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+}
+
+.service-price {
+  font-size: 15px;
+  font-weight: 700;
+  color: #e85d26;
+  white-space: nowrap;
+}
+
+/* ===========================
+   PORTFOLIO
+=========================== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.portfolio-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: #f0ece8;
+  border-radius: 8px;
+}
+
+/* ===========================
+   REVIEWS
+=========================== */
+.review-card {
+  padding: 20px;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0d8d2;
+  flex-shrink: 0;
+}
+
+.reviewer-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+.review-stars {
+  margin-left: auto;
+  font-size: 14px;
+  color: #f0a500;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================
+   STICKY BOOKING CARD
+=========================== */
+.booking-card {
+  position: sticky;
+  top: 100px;
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.price-from {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.price-amount {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.btn-book {
+  width: 100%;
+  padding: 14px;
+  background-color: #e85d26;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.btn-book:hover {
+  background-color: #c94d1e;
+}
+
+.response-time {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.booking-card hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 16px 0;
+}
+
+.vendor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.detail-row span:first-child {
+  color: #888;
+}
+
+.detail-row span:last-child {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* ===========================
+   BOOKING MODAL
+=========================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #e85d26;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-form textarea {
+  padding: 12px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s;
+  color: #1a1a1a;
+}
+
+.modal-form textarea:focus {
+  border-color: #e85d26;
+}
+
+/* reuse form-group, error-msg, btn-submit from auth.css */
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 860px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-right {
+    display: none;
+  }
+
+  .profile-cta-box {
+    display: flex;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-hero-inner {
+    flex-direction: column;
+  }
+
+  .profile-info h1 {
+    font-size: 26px;
+  }
+}

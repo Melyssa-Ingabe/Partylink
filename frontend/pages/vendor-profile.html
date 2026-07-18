@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DJ Kev — PartyLink</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">Party<span>Link</span></a>
+      <ul class="nav-links">
+        <li><a href="vendors.html">Browse Vendors</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BACK LINK -->
+  <div class="container">
+    <a href="vendors.html" class="back-link">← Back to vendors</a>
+  </div>
+
+  <!-- PROFILE HERO -->
+  <section class="profile-hero">
+    <div class="container">
+      <div class="profile-hero-inner">
+
+        <div class="profile-avatar"></div>
+
+        <div class="profile-info">
+          <span class="vendor-category">DJ</span>
+          <h1>DJ Kev</h1>
+          <p class="profile-location">📍 Kigali, Rwanda</p>
+          <div class="profile-rating">
+            ★★★★★
+            <span class="rating-score">4.8</span>
+            <span class="rating-count">(24 reviews)</span>
+          </div>
+          <p class="profile-tagline">Professional DJ for weddings, corporate events, and private parties across Rwanda.</p>
+        </div>
+
+        <div class="profile-cta-box">
+          <p class="price-from">Starting from</p>
+          <p class="price-amount">80,000 RWF</p>
+          <button class="btn-book" onclick="openBookingModal()">Send Booking Request</button>
+          <p class="response-time">⚡ Usually responds within 2 hours</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="profile-body">
+    <div class="container profile-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="profile-left">
+
+        <!-- About -->
+        <div class="profile-section">
+          <h2>About DJ Kev</h2>
+          <p>DJ Kev has over 6 years of experience performing at weddings, birthday parties, corporate events, and concerts across Kigali. Known for reading the crowd and keeping the energy high all night, DJ Kev specializes in Afrobeats, R&B, Hip Hop, and international mixes.</p>
+          <p>Every event is unique and DJ Kev works closely with clients to understand their music preferences and create the perfect atmosphere for their occasion.</p>
+        </div>
+
+        <!-- Services -->
+        <div class="profile-section">
+          <h2>Services offered</h2>
+          <div class="services-list">
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Wedding DJ Set</h3>
+                <p>Full evening DJ service for weddings including setup, sound system, and lighting.</p>
+              </div>
+              <div class="service-price">150,000 RWF</div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Birthday Party DJ</h3>
+                <p>3-hour DJ set for birthday parties with custom playlist based on your preferences.</p>
+              </div>
+              <div class="service-price">80,000 RWF</div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Corporate Event DJ</h3>
+                <p>Professional background and party music for corporate events and team gatherings.</p>
+              </div>
+              <div class="service-price">120,000 RWF</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="profile-section">
+          <h2>Portfolio</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-img"></div>
+            <div class="portfolio-img"></div>
+            <div class="portfolio-img"></div>
+            <div class="portfolio-img"></div>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="profile-section">
+          <h2>Reviews <span class="review-count">(24)</span></h2>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar"></div>
+              <div>
+                <p class="reviewer-name">Amina K.</p>
+                <p class="review-date">June 2026</p>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">DJ Kev was absolutely amazing at our wedding! He kept everyone on the dance floor all night. Highly recommend!</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar"></div>
+              <div>
+                <p class="reviewer-name">Patrick N.</p>
+                <p class="review-date">May 2026</p>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Professional, punctual, and great music selection. Our corporate event was a huge success thanks to DJ Kev.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div class="reviewer-avatar"></div>
+              <div>
+                <p class="reviewer-name">Claire M.</p>
+                <p class="review-date">April 2026</p>
+              </div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+            <p class="review-text">Great DJ, very responsive and easy to work with. Would definitely book again for future events.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="profile-right">
+
+        <!-- Sticky booking card -->
+        <div class="booking-card">
+          <p class="price-from">Starting from</p>
+          <p class="price-amount">80,000 RWF</p>
+          <button class="btn-book" onclick="openBookingModal()">Send Booking Request</button>
+          <p class="response-time">⚡ Usually responds within 2 hours</p>
+          <hr/>
+          <div class="vendor-details">
+            <div class="detail-row">
+              <span>Category</span>
+              <span>DJ</span>
+            </div>
+            <div class="detail-row">
+              <span>Location</span>
+              <span>Kigali, Rwanda</span>
+            </div>
+            <div class="detail-row">
+              <span>Rating</span>
+              <span>4.8 / 5</span>
+            </div>
+            <div class="detail-row">
+              <span>Events done</span>
+              <span>80+</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeBookingModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>Send Booking Request</h2>
+        <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      </div>
+
+      <form class="modal-form" id="bookingForm">
+
+        <div class="form-group">
+          <label>Event type</label>
+          <select id="eventType">
+            <option value="">Select event type</option>
+            <option>Wedding</option>
+            <option>Birthday Party</option>
+            <option>Corporate Event</option>
+            <option>Graduation</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Event date</label>
+          <input type="date" id="eventDate"/>
+        </div>
+
+        <div class="form-group">
+          <label>Estimated number of guests</label>
+          <input type="number" id="guestCount" placeholder="e.g. 100"/>
+        </div>
+
+        <div class="form-group">
+          <label>Additional notes</label>
+          <textarea id="notes" rows="4" placeholder="Tell the vendor more about your event, music preferences, or any special requests..."></textarea>
+        </div>
+
+        <div id="booking-error" class="error-msg hidden"></div>
+
+        <button type="submit" class="btn-submit" onclick="submitBooking(event)">Send Request</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-simple">
+    <p>© 2026 PartyLink. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/profile.js"></script>
+
+</body>
+</html>
