@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log In — PartyLink</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/auth.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">Party<span>Link</span></a>
+      <ul class="nav-links">
+        <li><a href="vendors.html">Browse Vendors</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- LOGIN FORM -->
+  <section class="auth-section">
+    <div class="auth-card">
+
+      <div class="auth-header">
+        <h1>Welcome back</h1>
+        <p>Log in to your PartyLink account</p>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">
+            Password
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+            <button type="button" class="toggle-password" onclick="togglePassword()">Show</button>
+          </div>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden">
+          Invalid email or password. Please try again.
+        </div>
+
+        <button type="submit" class="btn-submit">Log In</button>
+
+        <p class="auth-switch">
+          Don't have an account? <a href="register.html">Sign up</a>
+        </p>
+
+      </form>
+
+      <div class="auth-divider">
+        <span>or continue as</span>
+      </div>
+
+      <div class="auth-roles">
+        <a href="register.html?role=vendor" class="role-btn">I am a Vendor</a>
+        <a href="register.html?role=client" class="role-btn">I am a Client</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER SIMPLE -->
+  <footer class="footer-simple">
+    <p>© 2026 PartyLink. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/auth.js"></script>
+
+</body>
+</html>

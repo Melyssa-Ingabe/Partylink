@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PartyLink — Find Event Vendors in Africa</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Party<span>Link</span></a>
+      <ul class="nav-links">
+        <li><a href="pages/vendors.html">Browse Vendors</a></li>
+        <li><a href="pages/login.html">Log In</a></li>
+        <li><a href="pages/register.html" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find the perfect vendor<br/>for your next event</h1>
+      <p>Connect with trusted DJs, decorators, caterers, photographers,<br/>and more — all in one place. Starting in Kigali, Rwanda.</p>
+      <div class="search-bar">
+        <select class="search-select">
+          <option value="">All Categories</option>
+          <option value="dj">DJ</option>
+          <option value="decoration">Decoration</option>
+          <option value="catering">Catering</option>
+          <option value="photography">Photography</option>
+          <option value="florist">Florist</option>
+          <option value="mc">MC</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Search by name or city..." />
+        <button class="search-btn">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="container">
+      <h2>Browse by category</h2>
+      <div class="category-grid">
+        <a href="pages/vendors.html?category=dj" class="category-card">
+          <div class="category-icon">🎧</div>
+          <p>DJ</p>
+        </a>
+        <a href="pages/vendors.html?category=decoration" class="category-card">
+          <div class="category-icon">🎨</div>
+          <p>Decoration</p>
+        </a>
+        <a href="pages/vendors.html?category=catering" class="category-card">
+          <div class="category-icon">🍽️</div>
+          <p>Catering</p>
+        </a>
+        <a href="pages/vendors.html?category=photography" class="category-card">
+          <div class="category-icon">📷</div>
+          <p>Photography</p>
+        </a>
+        <a href="pages/vendors.html?category=florist" class="category-card">
+          <div class="category-icon">💐</div>
+          <p>Florist</p>
+        </a>
+        <a href="pages/vendors.html?category=mc" class="category-card">
+          <div class="category-icon">🎤</div>
+          <p>MC</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>How PartyLink works</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Search vendors</h3>
+          <p>Browse vendors by category, city, or budget and find the right fit for your event.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>View their profile</h3>
+          <p>Check their portfolio, pricing, and reviews from real clients before reaching out.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Send a booking request</h3>
+          <p>Tell the vendor your event date, type, and details — and wait for their response.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Enjoy your event</h3>
+          <p>Once confirmed, leave it to your vendor. After the event, leave a review to help others.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED VENDORS -->
+  <section class="featured">
+    <div class="container">
+      <h2>Featured vendors</h2>
+      <div class="vendor-grid">
+
+        <div class="vendor-card">
+          <div class="vendor-img-placeholder"></div>
+          <div class="vendor-info">
+            <span class="vendor-category">DJ</span>
+            <h3>DJ Kev</h3>
+            <p class="vendor-location">📍 Kigali, Rwanda</p>
+            <p class="vendor-price">From 80,000 RWF</p>
+            <div class="vendor-rating">★★★★★ <span>(24 reviews)</span></div>
+            <a href="pages/vendor-profile.html" class="btn-view">View Profile</a>
+          </div>
+        </div>
+
+        <div class="vendor-card">
+          <div class="vendor-img-placeholder"></div>
+          <div class="vendor-info">
+            <span class="vendor-category">Decoration</span>
+            <h3>Elegant Events Décor</h3>
+            <p class="vendor-location">📍 Kigali, Rwanda</p>
+            <p class="vendor-price">From 150,000 RWF</p>
+            <div class="vendor-rating">★★★★☆ <span>(18 reviews)</span></div>
+            <a href="pages/vendor-profile.html" class="btn-view">View Profile</a>
+          </div>
+        </div>
+
+        <div class="vendor-card">
+          <div class="vendor-img-placeholder"></div>
+          <div class="vendor-info">
+            <span class="vendor-category">Photography</span>
+            <h3>Lens & Light Studio</h3>
+            <p class="vendor-location">📍 Kigali, Rwanda</p>
+            <p class="vendor-price">From 200,000 RWF</p>
+            <div class="vendor-rating">★★★★★ <span>(31 reviews)</span></div>
+            <a href="pages/vendor-profile.html" class="btn-view">View Profile</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="center">
+        <a href="pages/vendors.html" class="btn-outline">See all vendors</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Are you an event vendor?</h2>
+      <p>Join PartyLink and reach hundreds of clients looking for your services in Kigali and beyond.</p>
+      <a href="pages/register.html" class="btn-cta">List your services — it's free</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">Party<span>Link</span></a>
+          <p>Connecting event vendors and clients across Africa.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <a href="pages/vendors.html">Browse Vendors</a>
+          <a href="pages/register.html">Register as Vendor</a>
+          <a href="pages/login.html">Log In</a>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <a href="#">About PartyLink</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 PartyLink. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

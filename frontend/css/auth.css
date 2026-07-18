@@ -1,0 +1,235 @@
+/* ===========================
+   AUTH PAGES (Login & Register)
+=========================== */
+
+.auth-section {
+  min-height: calc(100vh - 130px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff8f5;
+  padding: 60px 24px;
+}
+
+.auth-card {
+  background: #ffffff;
+  border: 1.5px solid #eee;
+  border-radius: 16px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  font-size: 15px;
+  color: #777;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forgot-link {
+  font-size: 13px;
+  font-weight: 400;
+  color: #e85d26;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.form-group input,
+.form-group select {
+  padding: 13px 16px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e85d26;
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+}
+
+/* Password toggle */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 72px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e85d26;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.toggle-password:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.error-msg {
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Submit button */
+.btn-submit {
+  padding: 14px;
+  background-color: #e85d26;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s;
+  margin-top: 4px;
+}
+
+.btn-submit:hover {
+  background-color: #c94d1e;
+}
+
+/* Switch link */
+.auth-switch {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.auth-switch a {
+  color: #e85d26;
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  color: #bbb;
+  font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #eee;
+}
+
+/* Role buttons */
+.auth-roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.role-btn {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.2s;
+}
+
+.role-btn:hover {
+  border-color: #e85d26;
+  color: #e85d26;
+}
+
+/* Simple footer */
+.footer-simple {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #999;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 32px 24px;
+  }
+
+  .auth-roles {
+    grid-template-columns: 1fr;
+  }
+}
