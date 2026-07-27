@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PartyLink — Find Event Vendors in Africa</title>
+  <title>PartyLink: Find Event Vendors in Africa</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -26,7 +26,7 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Find the perfect vendor<br/>for your next event</h1>
-      <p>Connect with trusted DJs, decorators, caterers, photographers,<br/>and more — all in one place. Starting in Kigali, Rwanda.</p>
+      <p>Connect with trusted DJs, decorators, caterers, photographers,<br/>and more; all in one place. Starting in Kigali, Rwanda.</p>
       <div class="search-bar">
         <select class="search-select">
           <option value="">All Categories</option>
@@ -44,37 +44,55 @@
   </section>
 
   <!-- CATEGORIES -->
-  <section class="categories">
-    <div class="container">
-      <h2>Browse by category</h2>
-      <div class="category-grid">
-        <a href="pages/vendors.html?category=dj" class="category-card">
-          <div class="category-icon">🎧</div>
-          <p>DJ</p>
-        </a>
-        <a href="pages/vendors.html?category=decoration" class="category-card">
-          <div class="category-icon">🎨</div>
-          <p>Decoration</p>
-        </a>
-        <a href="pages/vendors.html?category=catering" class="category-card">
-          <div class="category-icon">🍽️</div>
-          <p>Catering</p>
-        </a>
-        <a href="pages/vendors.html?category=photography" class="category-card">
-          <div class="category-icon">📷</div>
-          <p>Photography</p>
-        </a>
-        <a href="pages/vendors.html?category=florist" class="category-card">
-          <div class="category-icon">💐</div>
-          <p>Florist</p>
-        </a>
-        <a href="pages/vendors.html?category=mc" class="category-card">
-          <div class="category-icon">🎤</div>
-          <p>MC</p>
-        </a>
-      </div>
+<section class="categories">
+  <div class="container">
+    <h2>Browse by category</h2>
+
+    <div class="category-grid">
+      <a href="pages/vendors.html?category=dj" class="category-card">
+        <div class="category-icon">
+          <i class="fa fa-headphones" aria-hidden="true"></i>
+        </div>
+        <p>DJ</p>
+      </a>
+
+      <a href="pages/vendors.html?category=decoration" class="category-card">
+        <div class="category-icon">
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <p>Decoration</p>
+      </a>
+
+      <a href="pages/vendors.html?category=catering" class="category-card">
+        <div class="category-icon">
+          <i class="fa fa-cutlery" aria-hidden="true"></i>
+        </div>
+        <p>Catering</p>
+      </a>
+
+      <a href="pages/vendors.html?category=photography" class="category-card">
+        <div class="category-icon">
+          <i class="fa fa-camera" aria-hidden="true"></i>
+        </div>
+        <p>Photography</p>
+      </a>
+
+      <a href="pages/vendors.html?category=florist" class="category-card">
+        <div class="category-icon">
+          <i class="fa fa-leaf" aria-hidden="true"></i>
+        </div>
+        <p>Florist</p>
+      </a>
+
+      <a href="pages/vendors.html?category=mc" class="category-card">
+        <div class="category-icon">
+          <i class="fa fa-microphone" aria-hidden="true"></i>
+        </div>
+        <p>MC</p>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- HOW IT WORKS -->
   <section class="how-it-works">
@@ -94,7 +112,7 @@
         <div class="step">
           <div class="step-number">3</div>
           <h3>Send a booking request</h3>
-          <p>Tell the vendor your event date, type, and details — and wait for their response.</p>
+          <p>Tell the vendor your event date, type, and details, and wait for their response.</p>
         </div>
         <div class="step">
           <div class="step-number">4</div>
@@ -106,60 +124,67 @@
   </section>
 
   <!-- FEATURED VENDORS -->
-  <section class="featured">
-    <div class="container">
-      <h2>Featured vendors</h2>
-      <div class="vendor-grid">
+<section class="featured">
+  <div class="container">
+    <h2>Featured vendors</h2>
+    <div class="vendor-grid">
 
-        <div class="vendor-card">
-          <div class="vendor-img-placeholder"></div>
-          <div class="vendor-info">
-            <span class="vendor-category">DJ</span>
-            <h3>DJ Kev</h3>
-            <p class="vendor-location">📍 Kigali, Rwanda</p>
-            <p class="vendor-price">From 80,000 RWF</p>
-            <div class="vendor-rating">★★★★★ <span>(24 reviews)</span></div>
-            <a href="pages/vendor-profile.html" class="btn-view">View Profile</a>
-          </div>
+      <div class="vendor-card">
+        <img src="images/DJ Kev.jpg" alt="DJ Kev">
+        <div class="vendor-info">
+          <span class="vendor-category">DJ</span>
+          <h3>DJ Kev</h3>
+          <p class="vendor-location">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
+          </p>
+          <p class="vendor-price">From 80,000 RWF</p>
+          <div class="vendor-rating">★★★★★ <span>(24 reviews)</span></div>
+          <a href="pages/vendor-profile-dj-kev.html" class="btn-view">View Profile</a>
         </div>
-
-        <div class="vendor-card">
-          <div class="vendor-img-placeholder"></div>
-          <div class="vendor-info">
-            <span class="vendor-category">Decoration</span>
-            <h3>Elegant Events Décor</h3>
-            <p class="vendor-location">📍 Kigali, Rwanda</p>
-            <p class="vendor-price">From 150,000 RWF</p>
-            <div class="vendor-rating">★★★★☆ <span>(18 reviews)</span></div>
-            <a href="pages/vendor-profile.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-        <div class="vendor-card">
-          <div class="vendor-img-placeholder"></div>
-          <div class="vendor-info">
-            <span class="vendor-category">Photography</span>
-            <h3>Lens & Light Studio</h3>
-            <p class="vendor-location">📍 Kigali, Rwanda</p>
-            <p class="vendor-price">From 200,000 RWF</p>
-            <div class="vendor-rating">★★★★★ <span>(31 reviews)</span></div>
-            <a href="pages/vendor-profile.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
       </div>
-      <div class="center">
-        <a href="pages/vendors.html" class="btn-outline">See all vendors</a>
+
+      <div class="vendor-card">
+        <img src="images/Elegant Events Décor.jpg" alt="Elegant Events Décor">
+        <div class="vendor-info">
+          <span class="vendor-category">Decoration</span>
+          <h3>Elegant Events Décor</h3>
+          <p class="vendor-location">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
+          </p>
+          <p class="vendor-price">From 150,000 RWF</p>
+          <div class="vendor-rating">★★★★☆ <span>(18 reviews)</span></div>
+          <a href="pages/vendor-profile-decoration.html" class="btn-view">View Profile</a>
+        </div>
       </div>
+
+      <div class="vendor-card">
+        <img src="images/Lens & Light Studio.jpg" alt="Lens & Light Studio">
+        <div class="vendor-info">
+          <span class="vendor-category">Photography</span>
+          <h3>Lens & Light Studio</h3>
+          <p class="vendor-location">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
+          </p>
+          <p class="vendor-price">From 200,000 RWF</p>
+          <div class="vendor-rating">★★★★★ <span>(31 reviews)</span></div>
+          <a href="pages/vendor-profile-photography.html" class="btn-view">View Profile</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+
+    <div class="center">
+      <a href="pages/vendors.html" class="btn-outline">See all vendors</a>
+    </div>
+  </div>
+</section>
 
   <!-- CTA BANNER -->
   <section class="cta-banner">
     <div class="container">
       <h2>Are you an event vendor?</h2>
       <p>Join PartyLink and reach hundreds of clients looking for your services in Kigali and beyond.</p>
-      <a href="pages/register.html" class="btn-cta">List your services — it's free</a>
+      <a href="pages/register.html" class="btn-cta">List your services, it's free</a>
     </div>
   </section>
 
