@@ -34,7 +34,8 @@
   width: 120px;
   height: 120px;
   border-radius: 12px;
-  background-color: #e0d8d2;
+  object-fit: cover;
+  display: block;
   flex-shrink: 0;
 }
 
@@ -189,15 +190,16 @@
 =========================== */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .portfolio-img {
   width: 100%;
-  aspect-ratio: 1;
-  background-color: #f0ece8;
+  height: 220px;
+  object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
 /* ===========================

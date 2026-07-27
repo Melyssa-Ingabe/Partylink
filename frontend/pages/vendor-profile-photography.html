@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lens & Light Studio: PartyLink</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">Party<span>Link</span></a>
+      <ul class="nav-links">
+        <li><a href="vendors.html">Browse Vendors</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BACK LINK -->
+  <div class="container">
+    <a href="vendors.html" class="back-link">← Back to vendors</a>
+  </div>
+
+  <!-- PROFILE HERO -->
+  <section class="profile-hero">
+    <div class="container">
+      <div class="profile-hero-inner">
+
+        <img src="../images/Photography Avatar.jpg" alt="Lens & Light Studio" class="profile-avatar">
+
+        <div class="profile-info">
+          <span class="vendor-category">Photography</span>
+          <h1>Lens & Light Studio</h1>
+          <p class="profile-location">
+  <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
+</p>
+          <div class="profile-rating">
+            ★★★★★
+            <span class="rating-score">4.9</span>
+            <span class="rating-count">(31 reviews)</span>
+          </div>
+          <p class="profile-tagline">Capturing timeless moments through professional photography for weddings, celebrations, and corporate events across Rwanda.</p>
+        </div>
+
+        <div class="profile-cta-box">
+          <p class="price-from">Starting from</p>
+          <p class="price-amount">200,000 RWF</p>
+          <button class="btn-book" onclick="openBookingModal()">Send Booking Request</button>
+          <p class="response-time">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+  Usually responds within 2 hours
+</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="profile-body">
+    <div class="container profile-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="profile-left">
+
+        <!-- About -->
+        <div class="profile-section">
+          <h2>About Lens & Light Studio</h2>
+          <p>Lens & Light Studio specializes in capturing life's most memorable moments with creativity and attention to detail. From weddings and graduations to corporate events and private celebrations, every photograph is carefully composed to tell a unique story.</p>
+          <p>Using professional equipment and modern editing techniques, the team delivers high-quality images that clients can cherish for years to come.</p>
+        </div>
+
+        <!-- Services -->
+        <div class="profile-section">
+          <h2>Services offered</h2>
+          <div class="services-list">
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Wedding Photography</h3>
+                <p>Full-day wedding coverage with professionally edited digital photos.</p>
+              </div>
+              <div class="service-price">400,000 RWF</div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Event Photography</h3>
+                <p>Photography for birthdays, graduations, and private celebrations.</p>
+              </div>
+              <div class="service-price">250,000 RWF</div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Corporate Photography</h3>
+                <p>Professional coverage for conferences, launches, and business events.</p>
+              </div>
+              <div class="service-price">300,000 RWF</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="profile-section">
+          <h2>Portfolio</h2>
+          <div class="portfolio-grid">
+  <img src="../images/Portfolio 7.jpg" alt="Wedding Photos" class="portfolio-img">
+  <img src="../images/Portfolio 8.jpg" alt="Birthday photos" class="portfolio-img">
+  <img src="../images/Portfolio 9.jpg" alt="Gender reveal" class="portfolio-img">
+</div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="profile-section">
+          <h2>Reviews <span class="review-count">(31)</span></h2>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <p class="reviewer-name">Alice M.</p>
+                <p class="review-date">June 2026</p>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">The photos from our wedding were breathtaking. Every important moment was captured beautifully.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <p class="reviewer-name">Kevin R.</p>
+                <p class="review-date">May 2026</p>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Professional, friendly, and delivered our photos quickly.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <p class="reviewer-name">Grace T.</p>
+                <p class="review-date">April 2026</p>
+              </div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+            <p class="review-text">Amazing quality and attention to detail. Would definitely hire again.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="profile-right">
+
+        <!-- Sticky booking card -->
+        <div class="booking-card">
+          <p class="price-from">Starting from</p>
+          <p class="price-amount">200,000 RWF</p>
+          <button class="btn-book" onclick="openBookingModal()">Send Booking Request</button>
+          <p class="response-time">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+  Usually responds within 2 hours
+</p>
+          <hr/>
+          <div class="vendor-details">
+            <div class="detail-row">
+              <span>Category</span>
+              <span>Photography</span>
+            </div>
+            <div class="detail-row">
+              <span>Location</span>
+              <span>Kigali, Rwanda</span>
+            </div>
+            <div class="detail-row">
+              <span>Rating</span>
+              <span>4.9 / 5</span>
+            </div>
+            <div class="detail-row">
+              <span>Events done</span>
+              <span>150+</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeBookingModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>Send Booking Request</h2>
+        <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      </div>
+
+      <form class="modal-form" id="bookingForm">
+
+        <div class="form-group">
+          <label>Event type</label>
+          <select id="eventType">
+            <option value="">Select event type</option>
+            <option>Wedding</option>
+            <option>Birthday Party</option>
+            <option>Corporate Event</option>
+            <option>Graduation</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Event date</label>
+          <input type="date" id="eventDate"/>
+        </div>
+
+        <div class="form-group">
+          <label>Estimated number of guests</label>
+          <input type="number" id="guestCount" placeholder="e.g. 100"/>
+        </div>
+
+        <div class="form-group">
+          <label>Additional notes</label>
+          <textarea id="notes" rows="4" placeholder="Tell the vendor more about your event, music preferences, or any special requests..."></textarea>
+        </div>
+
+        <div id="booking-error" class="error-msg hidden"></div>
+
+        <button type="submit" class="btn-submit" onclick="submitBooking(event)">Send Request</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-simple">
+    <p>© 2026 PartyLink. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/profile.js"></script>
+
+</body>
+</html>

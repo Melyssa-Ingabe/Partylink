@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom & Petal Florist: PartyLink</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">Party<span>Link</span></a>
+      <ul class="nav-links">
+        <li><a href="vendors.html">Browse Vendors</a></li>
+        <li><a href="login.html">Log In</a></li>
+        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BACK LINK -->
+  <div class="container">
+    <a href="vendors.html" class="back-link">← Back to vendors</a>
+  </div>
+
+  <!-- PROFILE HERO -->
+  <section class="profile-hero">
+    <div class="container">
+      <div class="profile-hero-inner">
+
+        <img src="../images/Florist Avatar.jpg" alt="Bloom & Petal Florist" class="profile-avatar">
+
+        <div class="profile-info">
+          <span class="vendor-category">Florist</span>
+          <h1>Bloom & Petal Florist</h1>
+          <p class="profile-location">
+  <i class="fa fa-location-arrow" aria-hidden="true"></i> Musanze, Rwanda
+</p>
+          <div class="profile-rating">
+            ★★★★☆
+            <span class="rating-score">4.2</span>
+            <span class="rating-count">(9 reviews)</span>
+          </div>
+          <p class="profile-tagline">Beautiful floral arrangements designed to make every celebration unforgettable.</p>
+        </div>
+
+        <div class="profile-cta-box">
+          <p class="price-from">Starting from</p>
+          <p class="price-amount">50,000 RWF</p>
+          <button class="btn-book" onclick="openBookingModal()">Send Booking Request</button>
+          <p class="response-time">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+  Usually responds within 2 hours
+</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="profile-body">
+    <div class="container profile-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="profile-left">
+
+        <!-- About -->
+        <div class="profile-section">
+          <h2>About Bloom & Petal Florist</h2>
+          <p>Bloom & Petal Florist creates elegant floral designs for weddings, birthdays, anniversaries, and corporate events. Every bouquet and arrangement is handcrafted using fresh flowers and customized to match each client's vision.</p>
+          <p>From intimate celebrations to large-scale events, the team is passionate about bringing beauty and color to every occasion.</p>
+        </div>
+
+        <!-- Services -->
+        <div class="profile-section">
+          <h2>Services offered</h2>
+          <div class="services-list">
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Wedding Flowers</h3>
+                <p>Bridal bouquets, ceremony flowers, and reception arrangements.</p>
+              </div>
+              <div class="service-price">250,000 RWF</div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Event Floral Design</h3>
+                <p>Decorative floral displays for celebrations and special occasions.</p>
+              </div>
+              <div class="service-price">150,000 RWF</div>
+            </div>
+
+            <div class="service-item">
+              <div class="service-info">
+                <h3>Custom Bouquets</h3>
+                <p>Personalized bouquets for gifts and events.</p>
+              </div>
+              <div class="service-price">50,000 RWF</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="profile-section">
+          <h2>Portfolio</h2>
+          <div class="portfolio-grid">
+  <img src="../images/Portfolio 13.jpg" alt="Wedding florals" class="portfolio-img">
+  <img src="../images/Portfolio 14.jpg" alt="Event florals" class="portfolio-img">
+  <img src="../images/Portfolio 15.jpg" alt="Custom florals" class="portfolio-img">
+</div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="profile-section">
+          <h2>Reviews <span class="review-count">(12)</span></h2>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <p class="reviewer-name">Vanessa H.</p>
+                <p class="review-date">June 2026</p>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">The flowers were stunning and stayed fresh throughout the event.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <p class="reviewer-name">Paul M.</p>
+                <p class="review-date">May 2026</p>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">Beautiful arrangements with excellent customer service.</p>
+          </div>
+
+          <div class="review-card">
+            <div class="review-header">
+              <div>
+                <p class="reviewer-name">Claudine I.</p>
+                <p class="review-date">April 2026</p>
+              </div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+            <p class="review-text">Exactly what we imagined for our wedding.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="profile-right">
+
+        <!-- Sticky booking card -->
+        <div class="booking-card">
+          <p class="price-from">Starting from</p>
+          <p class="price-amount">50,000 RWF</p>
+          <button class="btn-book" onclick="openBookingModal()">Send Booking Request</button>
+          <p class="response-time">
+  <i class="fa fa-clock-o" aria-hidden="true"></i>
+  Usually responds within 2 hours
+</p>
+          <hr/>
+          <div class="vendor-details">
+            <div class="detail-row">
+              <span>Category</span>
+              <span>Florist</span>
+            </div>
+            <div class="detail-row">
+              <span>Location</span>
+              <span>Musanze, Rwanda</span>
+            </div>
+            <div class="detail-row">
+              <span>Rating</span>
+              <span>4.2 / 5</span>
+            </div>
+            <div class="detail-row">
+              <span>Events done</span>
+              <span>45+</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay hidden" id="modalOverlay" onclick="closeBookingModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>Send Booking Request</h2>
+        <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      </div>
+
+      <form class="modal-form" id="bookingForm">
+
+        <div class="form-group">
+          <label>Event type</label>
+          <select id="eventType">
+            <option value="">Select event type</option>
+            <option>Wedding</option>
+            <option>Birthday Party</option>
+            <option>Corporate Event</option>
+            <option>Graduation</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Event date</label>
+          <input type="date" id="eventDate"/>
+        </div>
+
+        <div class="form-group">
+          <label>Estimated number of guests</label>
+          <input type="number" id="guestCount" placeholder="e.g. 100"/>
+        </div>
+
+        <div class="form-group">
+          <label>Additional notes</label>
+          <textarea id="notes" rows="4" placeholder="Tell the vendor more about your event, music preferences, or any special requests..."></textarea>
+        </div>
+
+        <div id="booking-error" class="error-msg hidden"></div>
+
+        <button type="submit" class="btn-submit" onclick="submitBooking(event)">Send Request</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-simple">
+    <p>© 2026 PartyLink. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/profile.js"></script>
+
+</body>
+</html>
