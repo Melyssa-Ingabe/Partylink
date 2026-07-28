@@ -1,5 +1,3 @@
-const API_URL = 'https://partylink-backend.onrender.com';
-
 function togglePassword() {
   const passwordInput = document.getElementById('password');
   const toggleBtn = document.querySelector('.toggle-password');
