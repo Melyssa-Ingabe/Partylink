@@ -12,7 +12,11 @@ const PORT = process.env.PORT || 5000;
 // ===========================
 // MIDDLEWARE
 // ===========================
-app.use(cors());
+app.use(cors({
+  origin: 'https://partylink-app.vercel.app',
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 // ===========================
