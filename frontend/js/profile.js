@@ -1,3 +1,5 @@
+const API_URL = 'https://partylink-backend.onrender.com';
+
 // Open booking modal
 function openBookingModal() {
   document.getElementById('modalOverlay').classList.remove('hidden');

@@ -1,3 +1,5 @@
+const API_URL = 'https://partylink-backend.onrender.com';
+
 // ===========================
 // SIDEBAR MENU TAB SWITCHING
 // ===========================
