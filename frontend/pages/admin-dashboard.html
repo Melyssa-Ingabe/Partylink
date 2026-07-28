@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | PartyLink</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<script src="../js/dashboard.js"></script>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+  <div class="nav-container">
+
+    <a href="../index.html" class="logo">
+      Party<span>Link</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#">Dashboard</a></li>
+      <li><a href="#">Vendors</a></li>
+      <li><a href="#">Bookings</a></li>
+      <li><a href="#">Users</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- DASHBOARD -->
+
+<section class="dashboard">
+
+<div class="container">
+
+<div class="dashboard-layout">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="sidebar-profile">
+
+<i class="fa fa-user-shield admin-icon"></i>
+
+<h3>Administrator</h3>
+
+<p>System Administrator</p>
+
+</div>
+
+<ul class="sidebar-menu">
+
+<li class="active">
+<i class="fa fa-chart-line"></i>
+Dashboard
+</li>
+
+<li>
+<i class="fa fa-store"></i>
+Vendors
+</li>
+
+<li>
+<i class="fa fa-users"></i>
+Users
+</li>
+
+<li>
+<i class="fa fa-calendar"></i>
+Bookings
+</li>
+
+<li>
+<i class="fa fa-flag"></i>
+Reports
+</li>
+
+<li>
+<i class="fa fa-sign-out-alt"></i>
+Logout
+</li>
+
+</ul>
+
+</aside>
+
+<!-- Main Content -->
+
+<main class="dashboard-content">
+
+<div class="dashboard-header">
+
+<h1>Welcome, Administrator</h1>
+
+<p>
+Manage vendors, users and booking activity across PartyLink.
+</p>
+
+</div>
+
+<!-- Statistics -->
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<i class="fa fa-store"></i>
+
+<h2>24</h2>
+
+<p>Registered Vendors</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa fa-users"></i>
+
+<h2>126</h2>
+
+<p>Registered Users</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa fa-calendar-check"></i>
+
+<h2>57</h2>
+
+<p>Bookings</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="fa fa-star"></i>
+
+<h2>81</h2>
+
+<p>Reviews</p>
+
+</div>
+
+</div>
+
+<!-- Vendor Approvals -->
+
+<div class="dashboard-card">
+
+<h2>Vendor Approval Queue</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Vendor</th>
+
+<th>Category</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Elegant Events Décor</td>
+
+<td>Decoration</td>
+
+<td><span class="status pending">Pending</span></td>
+
+<td>
+
+<button class="btn-view">Approve</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Taste of Africa Catering</td>
+
+<td>Catering</td>
+
+<td><span class="status pending">Pending</span></td>
+
+<td>
+
+<button class="btn-view">Approve</button>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Bloom & Petal Florist</td>
+
+<td>Florist</td>
+
+<td><span class="status confirmed">Approved</span></td>
+
+<td>
+
+<button class="btn-view">View</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Recent Bookings -->
+
+<div class="dashboard-card">
+
+<h2>Recent Bookings</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Client</th>
+
+<th>Vendor</th>
+
+<th>Event</th>
+
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Alice M.</td>
+
+<td>DJ Kev</td>
+
+<td>Wedding</td>
+
+<td>28 Jul 2026</td>
+
+</tr>
+
+<tr>
+
+<td>Patrick N.</td>
+
+<td>Lens & Light Studio</td>
+
+<td>Graduation</td>
+
+<td>2 Aug 2026</td>
+
+</tr>
+
+<tr>
+
+<td>Claire K.</td>
+
+<td>Elegant Events Décor</td>
+
+<td>Corporate Event</td>
+
+<td>11 Aug 2026</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- Recent Reviews -->
+
+<div class="dashboard-card">
+
+<h2>Latest Reviews</h2>
+
+<div class="review-item">
+
+★★★★★
+
+<p>
+
+DJ Kev received a 5-star review for an excellent wedding performance.
+
+</p>
+
+</div>
+
+<div class="review-item">
+
+★★★★☆
+
+<p>
+
+Elegant Events Décor was praised for beautiful decorations.
+
+</p>
+
+</div>
+
+<div class="review-item">
+
+★★★★★
+
+<p>
+
+Lens & Light Studio received another positive photography review.
+
+</p>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
