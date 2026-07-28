@@ -11,12 +11,13 @@ function closeBookingModal() {
 }
 
 // Submit booking request
-function submitBooking(e) {
+async function submitBooking(e) {
   e.preventDefault();
 
   const eventType = document.getElementById('eventType').value;
   const eventDate = document.getElementById('eventDate').value;
   const guestCount = document.getElementById('guestCount').value;
+  const notes = document.getElementById('notes').value;
   const errorMsg = document.getElementById('booking-error');
 
   // Basic validation
@@ -26,15 +27,47 @@ function submitBooking(e) {
     return;
   }
 
-  // Hide error if previously shown
+  // Check if user is logged in
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) {
+    errorMsg.classList.remove('hidden');
+    errorMsg.textContent = 'You must be logged in to send a booking request.';
+    return;
+  }
+
   errorMsg.classList.add('hidden');
 
-  // Placeholder — replace with real API call later
-  console.log('Booking request sent:', { eventType, eventDate, guestCount });
+  try {
+    const response = await fetch('http://localhost:5000/api/bookings/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        customer_id: user.id,
+        vendor_id: VENDOR_ID,
+        event_date: eventDate,
+        event_type: eventType,
+        guest_count: parseInt(guestCount),
+        notes: notes
+      })
+    });
 
-  // Close modal and show success
-  closeBookingModal();
-  alert('Booking request sent! The vendor will respond within 2 hours. (Backend not connected yet)');
+    const data = await response.json();
+
+    if (!response.ok) {
+      errorMsg.classList.remove('hidden');
+      errorMsg.textContent = data.error;
+      return;
+    }
+
+    closeBookingModal();
+    alert('Booking request sent successfully! The vendor will respond soon.');
+
+  } catch (err) {
+    errorMsg.classList.remove('hidden');
+    errorMsg.textContent = 'Something went wrong. Please try again.';
+  }
 }
 
 // Close modal when pressing Escape key
