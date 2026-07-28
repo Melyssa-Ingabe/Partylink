@@ -38,7 +38,7 @@ async function submitBooking(e) {
   errorMsg.classList.add('hidden');
 
   try {
-    const response = await fetch('${API_URL}/api/bookings/create', {
+    const response = await fetch(`${API_URL}/api/bookings/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

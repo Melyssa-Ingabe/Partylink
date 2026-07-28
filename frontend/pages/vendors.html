@@ -1,200 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Browse Vendors: PartyLink</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/vendors.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="../js/config.js"></script>
-</head>
-<body>
+// ===========================
+// FILTER VENDORS
+// ===========================
+function filterVendors() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const category = document.getElementById('categoryFilter').value;
+  const location = document.getElementById('locationFilter').value;
+  const minRating = parseFloat(document.getElementById('ratingFilter').value) || 0;
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="../index.html" class="logo">Party<span>Link</span></a>
-      <ul class="nav-links">
-        <li><a href="vendors.html">Browse Vendors</a></li>
-        <li><a href="login.html">Log In</a></li>
-        <li><a href="register.html" class="btn-nav">Sign Up</a></li>
-      </ul>
-    </div>
-  </nav>
+  const cards = document.querySelectorAll('.vendor-card');
+  let visibleCount = 0;
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="container">
-      <h1>Browse Vendors</h1>
-      <p>Find trusted event service providers in Kigali and across Africa</p>
-    </div>
-  </section>
+  cards.forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    const cardCategory = card.dataset.category;
+    const cardLocation = card.dataset.location;
+    const cardRating = parseFloat(card.dataset.rating);
 
-  <!-- SEARCH & FILTERS -->
-  <section class="filters-section">
-    <div class="container">
-      <div class="filters-bar">
+    const matchesSearch = name.includes(search);
+    const matchesCategory = category === '' || cardCategory === category;
+    const matchesLocation = location === '' || cardLocation.includes(location);
+    const matchesRating = cardRating >= minRating;
 
-        <div class="filter-group">
-          <label>Search</label>
-          <input type="text" id="searchInput" placeholder="Search by name..." oninput="filterVendors()"/>
-        </div>
+    if (matchesSearch && matchesCategory && matchesLocation && matchesRating) {
+      card.style.display = 'block';
+      visibleCount++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
 
-        <div class="filter-group">
-          <label>Category</label>
-          <select id="categoryFilter" onchange="filterVendors()">
-            <option value="">All Categories</option>
-            <option value="DJ">DJ</option>
-            <option value="Decoration">Decoration</option>
-            <option value="Catering">Catering</option>
-            <option value="Photography">Photography</option>
-            <option value="Florist">Florist</option>
-            <option value="MC">MC</option>
-            <option value="Transport">Transport</option>
-          </select>
-        </div>
+  document.getElementById('resultsCount').textContent = `Showing ${visibleCount} vendor${visibleCount !== 1 ? 's' : ''}`;
 
-        <div class="filter-group">
-          <label>Location</label>
-          <select id="locationFilter" onchange="filterVendors()">
-            <option value="">All Locations</option>
-            <option value="Kigali">Kigali</option>
-            <option value="Musanze">Musanze</option>
-            <option value="Huye">Huye</option>
-            <option value="Rubavu">Rubavu</option>
-          </select>
-        </div>
+  const noResults = document.getElementById('noResults');
+  const vendorGrid = document.getElementById('vendorGrid');
+  if (visibleCount === 0) {
+    noResults.classList.remove('hidden');
+    vendorGrid.style.display = 'none';
+  } else {
+    noResults.classList.add('hidden');
+    vendorGrid.style.display = 'grid';
+  }
+}
 
-        <div class="filter-group">
-          <label>Min Rating</label>
-          <select id="ratingFilter" onchange="filterVendors()">
-            <option value="">Any Rating</option>
-            <option value="4.5">4.5+</option>
-            <option value="4">4.0+</option>
-            <option value="3.5">3.5+</option>
-          </select>
-        </div>
-
-        <button class="btn-clear" onclick="clearFilters()">Clear filters</button>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- RESULTS COUNT -->
-  <div class="container">
-    <p class="results-count" id="resultsCount">Showing 6 vendors</p>
-  </div>
-
-  <!-- VENDOR GRID -->
-  <section class="vendors-section">
-    <div class="container">
-      <div class="vendor-grid" id="vendorGrid">
-
-        <div class="vendor-card" data-name="DJ Kev" data-category="DJ" data-location="Kigali" data-rating="4.8">
-          <img src="../images/DJ Kev.jpg" alt="DJ Kev">
-          <div class="vendor-info">
-            <span class="vendor-category">DJ</span>
-            <h3>DJ Kev</h3>
-            <p class="vendor-location">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
-            </p>
-            <p class="vendor-price">From 80,000 RWF</p>
-            <div class="vendor-rating">★★★★★ <span>(24 reviews)</span></div>
-            <a href="vendor-profile-dj-kev.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-        <div class="vendor-card" data-name="Elegant Events Décor" data-category="Decoration" data-location="Kigali" data-rating="4.3">
-          <img src="../images/Elegant Events Décor.jpg" alt="Elegant Events Décor">
-          <div class="vendor-info">
-            <span class="vendor-category">Decoration</span>
-            <h3>Elegant Events Décor</h3>
-            <p class="vendor-location">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
-            </p>
-            <p class="vendor-price">From 150,000 RWF</p>
-            <div class="vendor-rating">★★★★☆ <span>(18 reviews)</span></div>
-            <a href="vendor-profile-decoration.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-        <div class="vendor-card" data-name="Lens & Light Studio" data-category="Photography" data-location="Kigali" data-rating="4.9">
-          <img src="../images/Lens & Light Studio.jpg" alt="Lens &amp; Light Studio">
-          <div class="vendor-info">
-            <span class="vendor-category">Photography</span>
-            <h3>Lens &amp; Light Studio</h3>
-            <p class="vendor-location">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
-            </p>
-            <p class="vendor-price">From 200,000 RWF</p>
-            <div class="vendor-rating">★★★★★ <span>(31 reviews)</span></div>
-            <a href="vendor-profile-photography.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-        <div class="vendor-card" data-name="Taste of Africa Catering" data-category="Catering" data-location="Kigali" data-rating="4.6">
-          <img src="../images/Taste of Africa Catering.jpg" alt="Taste of Africa Catering">
-          <div class="vendor-info">
-            <span class="vendor-category">Catering</span>
-            <h3>Taste of Africa Catering</h3>
-            <p class="vendor-location">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
-            </p>
-            <p class="vendor-price">From 500,000 RWF</p>
-            <div class="vendor-rating">★★★★★ <span>(12 reviews)</span></div>
-            <a href="vendor-profile-catering.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-        <div class="vendor-card" data-name="Bloom & Petal Florist" data-category="Florist" data-location="Musanze" data-rating="4.2">
-          <img src="../images/Bloom & Petal Florist.jpg" alt="Bloom & Petal Florist">
-          <div class="vendor-info">
-            <span class="vendor-category">Florist</span>
-            <h3>Bloom &amp; Petal Florist</h3>
-            <p class="vendor-location">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i> Musanze, Rwanda
-            </p>
-            <p class="vendor-price">From 50,000 RWF</p>
-            <div class="vendor-rating">★★★★☆ <span>(9 reviews)</span></div>
-            <a href="vendor-profile-florist.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-        <div class="vendor-card" data-name="MC Brillant" data-category="MC" data-location="Kigali" data-rating="4.7">
-          <img src="../images/MC Brillant.jpg" alt="MC Brillant">
-          <div class="vendor-info">
-            <span class="vendor-category">MC</span>
-            <h3>MC Brillant</h3>
-            <p class="vendor-location">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i> Kigali, Rwanda
-            </p>
-            <p class="vendor-price">From 60,000 RWF</p>
-            <div class="vendor-rating">★★★★★ <span>(15 reviews)</span></div>
-            <a href="vendor-profile-mc.html" class="btn-view">View Profile</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- No results message -->
-      <div class="no-results hidden" id="noResults">
-        <p> <i class="fa fa-frown-o" aria-hidden="true"></i> No vendors found matching your search.</p>
-        <button class="btn-clear" onclick="clearFilters()">Clear filters</button>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer-simple">
-    <p>© 2026 PartyLink. All rights reserved.</p>
-  </footer>
-
-  <script src="../js/vendors.js"></script>
-  <script src="../js/main.js"></script>
-
-</body>
-</html>
+// ===========================
+// CLEAR FILTERS
+// ===========================
+function clearFilters() {
+  document.getElementById('searchInput').value = '';
+  document.getElementById('categoryFilter').value = '';
+  document.getElementById('locationFilter').value = '';
+  document.getElementById('ratingFilter').value = '';
+  filterVendors();
+}
