@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 // ===========================
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/vendors', require('./routes/vendors'));
-// app.use('/api/bookings', require('./routes/bookings'));
+app.use('/api/bookings', require('./routes/bookings'));
 
 // ===========================
 // START SERVER
