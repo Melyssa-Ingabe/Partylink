@@ -24,7 +24,7 @@ const vendorProfiles = {
 // ===========================
 async function loadVendors() {
   try {
-    const response = await fetch('http://localhost:5000/api/vendors');
+    const response = await fetch('${API_URL}/api/vendors');
     const vendors = await response.json();
 
     const grid = document.getElementById('vendorGrid');

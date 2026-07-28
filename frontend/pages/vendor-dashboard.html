@@ -10,316 +10,164 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="../js/config.js"></script>
 </head>
-
-<script src="../js/dashboard.js"></script>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
+<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
-
-    <a href="../index.html" class="logo">
-      Party<span>Link</span>
-    </a>
-
+    <a href="../index.html" class="logo">Party<span>Link</span></a>
     <ul class="nav-links">
       <li><a href="#">Dashboard</a></li>
       <li><a href="#">My Bookings</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Reviews</a></li>
-      <li><a href="#">Logout</a></li>
+      <li><a href="#" onclick="logout()">Logout</a></li>
     </ul>
-
   </div>
 </nav>
 
-<!-- ================= DASHBOARD ================= -->
-
+<!-- DASHBOARD -->
 <section class="dashboard">
-
 <div class="container">
-
 <div class="dashboard-layout">
 
 <!-- Sidebar -->
-
 <aside class="sidebar">
+  <div class="sidebar-profile">
+    <img src="../images/Kev Avatar.jpg" alt="DJ Kev">
+    <h3>DJ Kev</h3>
+    <p>Vendor Account</p>
+  </div>
 
-<div class="sidebar-profile">
-
-<img src="../images/Kev Avatar.jpg"
-alt="DJ Kev">
-
-<h3>DJ Kev</h3>
-
-<p>Vendor Account</p>
-
-</div>
-
-<ul class="sidebar-menu">
-
-<li class="active">
-<i class="fa fa-chart-line"></i>
-Dashboard
-</li>
-
-<li>
-<i class="fa fa-calendar"></i>
-Bookings
-</li>
-
-<li>
-<i class="fa fa-music"></i>
-Services
-</li>
-
-<li>
-<i class="fa fa-star"></i>
-Reviews
-</li>
-
-<li>
-<i class="fa fa-user"></i>
-Profile
-</li>
-
-<li>
-<i class="fa fa-sign-out-alt"></i>
-Logout
-</li>
-
-</ul>
-
+  <ul class="sidebar-menu">
+    <li class="active">
+      <i class="fa fa-chart-line"></i> Dashboard
+    </li>
+    <li>
+      <i class="fa fa-calendar"></i> Bookings
+    </li>
+    <li>
+      <i class="fa fa-music"></i> Services
+    </li>
+    <li>
+      <i class="fa fa-star"></i> Reviews
+    </li>
+    <li>
+      <i class="fa fa-user"></i> Profile
+    </li>
+    <li onclick="logout()">
+      <i class="fa fa-sign-out-alt"></i> Logout
+    </li>
+  </ul>
 </aside>
 
 <!-- Main -->
-
 <main class="dashboard-content">
 
-<div class="dashboard-header">
-
-<h1>Welcome back, DJ Kev 👋</h1>
-
-<p>
-Here's what's happening with your business today.
-</p>
-
-</div>
-
-<!-- Stats -->
-
-<div class="stats-grid">
-
-<div class="stat-card">
-
-<i class="fa fa-envelope-open"></i>
-
-<h2>5</h2>
-
-<p>Pending Requests</p>
-
-</div>
-
-<div class="stat-card">
-
-<i class="fa fa-calendar-check"></i>
-
-<h2>12</h2>
-
-<p>Confirmed Bookings</p>
-
-</div>
-
-<div class="stat-card">
-
-<i class="fa fa-star"></i>
-
-<h2>4.8</h2>
-
-<p>Average Rating</p>
-
-</div>
-
-<div class="stat-card">
-
-<i class="fa fa-eye"></i>
-
-<h2>230</h2>
-
-<p>Profile Views</p>
-
-</div>
-
-</div>
-
-<!-- Upcoming Bookings -->
-
-<div class="dashboard-card">
-
-<h2>Upcoming Bookings</h2>
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>Customer</th>
-
-<th>Event</th>
-
-<th>Date</th>
-
-<th>Status</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<td>Alice M.</td>
-
-<td>Wedding</td>
-
-<td>28 Jul 2026</td>
-
-<td><span class="status pending">Pending</span></td>
-
-</tr>
-
-<tr>
-
-<td>Eric N.</td>
-
-<td>Birthday</td>
-
-<td>3 Aug 2026</td>
-
-<td><span class="status confirmed">Confirmed</span></td>
-
-</tr>
-
-<tr>
-
-<td>Claire K.</td>
-
-<td>Corporate Event</td>
-
-<td>10 Aug 2026</td>
-
-<td><span class="status confirmed">Confirmed</span></td>
-
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-<!-- Services -->
-
-<div class="dashboard-card">
-
-<div class="card-header">
-
-<h2>My Services</h2>
-
-<button class="btn-view">
-
-Edit Services
-
-</button>
-
-</div>
-
-<div class="service-row">
-
-<span>Wedding DJ Set</span>
-
-<strong>150,000 RWF</strong>
-
-</div>
-
-<div class="service-row">
-
-<span>Birthday Party DJ</span>
-
-<strong>80,000 RWF</strong>
-
-</div>
-
-<div class="service-row">
-
-<span>Corporate Event DJ</span>
-
-<strong>120,000 RWF</strong>
-
-</div>
-
-</div>
-
-<!-- Reviews -->
-
-<div class="dashboard-card">
-
-<h2>Recent Reviews</h2>
-
-<div class="review-item">
-
-★★★★★
-
-<p>
-
-DJ Kev kept our guests dancing all night.
-Highly recommended!
-
-</p>
-
-</div>
-
-<div class="review-item">
-
-★★★★★
-
-<p>
-
-Very professional and easy to work with.
-
-</p>
-
-</div>
-
-<div class="review-item">
-
-★★★★☆
-
-<p>
-
-Great music selection and excellent communication.
-
-</p>
-
-</div>
-
-</div>
+  <div class="dashboard-header">
+    <h1>Welcome back, DJ Kev 👋</h1>
+    <p>Here's what's happening with your business today.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <i class="fa fa-envelope-open"></i>
+      <h2 id="statPending">0</h2>
+      <p>Pending Requests</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa fa-calendar-check"></i>
+      <h2 id="statTotal">0</h2>
+      <p>Total Bookings</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa fa-star"></i>
+      <h2>4.8</h2>
+      <p>Average Rating</p>
+    </div>
+
+    <div class="stat-card">
+      <i class="fa fa-eye"></i>
+      <h2>230</h2>
+      <p>Profile Views</p>
+    </div>
+
+  </div>
+
+  <!-- Upcoming Bookings -->
+  <div class="dashboard-card">
+    <h2>Upcoming Bookings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Event</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="bookingsTableBody">
+        <tr>
+          <td colspan="5" style="text-align:center;color:#888;">Loading bookings...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Services -->
+  <div class="dashboard-card">
+    <div class="card-header">
+      <h2>My Services</h2>
+      <button class="btn-view">Edit Services</button>
+    </div>
+    <div class="service-row">
+      <span>Wedding DJ Set</span>
+      <strong>150,000 RWF</strong>
+    </div>
+    <div class="service-row">
+      <span>Birthday Party DJ</span>
+      <strong>80,000 RWF</strong>
+    </div>
+    <div class="service-row">
+      <span>Corporate Event DJ</span>
+      <strong>120,000 RWF</strong>
+    </div>
+  </div>
+
+  <!-- Reviews -->
+  <div class="dashboard-card">
+    <h2>Recent Reviews</h2>
+    <div class="review-item">
+      ★★★★★
+      <p>DJ Kev kept our guests dancing all night. Highly recommended!</p>
+    </div>
+    <div class="review-item">
+      ★★★★★
+      <p>Very professional and easy to work with.</p>
+    </div>
+    <div class="review-item">
+      ★★★★☆
+      <p>Great music selection and excellent communication.</p>
+    </div>
+  </div>
 
 </main>
 
 </div>
-
 </div>
-
 </section>
 
-</body>
+<script src="../js/dashboard.js"></script>
+<script src="../js/main.js"></script>
 
+</body>
 </html>
