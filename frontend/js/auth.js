@@ -56,9 +56,9 @@ if (registerForm) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       if (data.user.role === 'vendor') {
-        window.location.href = 'vendor-dashboard.html';
+        window.location.href = '/pages/vendor-dashboard.html';
       } else {
-        window.location.href = '../index.html';
+        window.location.href = '/index.html';
       }
     } catch (err) {
       errorMsg.classList.remove('hidden');
@@ -97,12 +97,10 @@ if (loginForm) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       if (data.user.role === 'vendor') {
-        window.location.href = 'vendor-dashboard.html';
-      } else if (data.user.role === 'admin') {
-        window.location.href = 'admin-dashboard.html';
-      } else {
-        window.location.href = '../index.html';
-      }
+  window.location.href = '/pages/vendor-dashboard.html';
+} else {
+  window.location.href = '/index.html';
+}
     } catch (err) {
       errorMsg.classList.remove('hidden');
       errorMsg.textContent = 'Something went wrong. Please try again.';
