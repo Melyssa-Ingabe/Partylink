@@ -40,3 +40,27 @@ if (navbar) {
     }
   });
 }
+
+// ===========================
+// NAVBAR — AUTH STATE
+// ===========================
+const user = JSON.parse(localStorage.getItem('user'));
+
+if (user) {
+  const navLinks = document.querySelector('.nav-links');
+  if (navLinks) {
+    navLinks.innerHTML = `
+      <li><a href="pages/vendors.html">Browse Vendors</a></li>
+      <li><span class="nav-username">Hi, ${user.name.split(' ')[0]} </span></li>
+      ${user.role === 'vendor' ? '<li><a href="pages/vendor-dashboard.html">Dashboard</a></li>' : ''}
+      ${user.role === 'admin' ? '<li><a href="pages/admin-dashboard.html">Dashboard</a></li>' : ''}
+      <li><a href="#" onclick="logout()">Log Out</a></li>
+    `;
+  }
+}
+
+function logout() {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  window.location.href = '/frontend/index.html';
+}

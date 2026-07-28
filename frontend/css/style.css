@@ -526,3 +526,9 @@ ul {
     width: 100%;
   }
 }
+
+.nav-username {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e85d26;
+}
