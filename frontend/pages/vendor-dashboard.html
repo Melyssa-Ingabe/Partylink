@@ -1,173 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vendor Dashboard | PartyLink</title>
+// ===========================
+// SIDEBAR MENU TAB SWITCHING
+// ===========================
+const menuItems = document.querySelectorAll('.sidebar-menu li');
 
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/dashboard.css">
+menuItems.forEach(item => {
+  item.addEventListener('click', function () {
+    menuItems.forEach(i => i.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+// ===========================
+// LOAD REAL BOOKINGS (Vendor)
+// ===========================
+async function loadVendorBookings() {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) return;
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="../js/config.js"></script>
-</head>
+  try {
+    const response = await fetch(`${API_URL}/api/bookings/vendor/${user.id}`);
+    const bookings = await response.json();
 
-<body>
+    const tbody = document.getElementById('bookingsTableBody');
+    if (!tbody) return;
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="../index.html" class="logo">Party<span>Link</span></a>
-    <ul class="nav-links">
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="#">My Bookings</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#" onclick="logout()">Logout</a></li>
-    </ul>
-  </div>
-</nav>
+    if (bookings.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#888;">No bookings yet.</td></tr>';
+      return;
+    }
 
-<!-- DASHBOARD -->
-<section class="dashboard">
-<div class="container">
-<div class="dashboard-layout">
+    tbody.innerHTML = bookings.map(b => `
+      <tr>
+        <td>${b.customer_name}</td>
+        <td>${b.event_type}</td>
+        <td>${new Date(b.event_date).toLocaleDateString()}</td>
+        <td>
+          <span class="status ${b.status === 'pending' ? 'pending' : b.status === 'accepted' ? 'confirmed' : 'declined'}">
+            ${b.status.charAt(0).toUpperCase() + b.status.slice(1)}
+          </span>
+        </td>
+        <td>
+          ${b.status === 'pending' ? `
+            <button class="btn-view" onclick="updateBooking(${b.id}, 'accepted')">Accept</button>
+            <button style="background:#fee2e2;color:#991b1b;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-weight:600;margin-left:6px;" onclick="updateBooking(${b.id}, 'declined')">Decline</button>
+          ` : '—'}
+        </td>
+      </tr>
+    `).join('');
 
-<!-- Sidebar -->
-<aside class="sidebar">
-  <div class="sidebar-profile">
-    <img src="../images/Kev Avatar.jpg" alt="DJ Kev">
-    <h3>DJ Kev</h3>
-    <p>Vendor Account</p>
-  </div>
+  } catch (err) {
+    console.error('Error loading bookings:', err);
+  }
+}
 
-  <ul class="sidebar-menu">
-    <li class="active">
-      <i class="fa fa-chart-line"></i> Dashboard
-    </li>
-    <li>
-      <i class="fa fa-calendar"></i> Bookings
-    </li>
-    <li>
-      <i class="fa fa-music"></i> Services
-    </li>
-    <li>
-      <i class="fa fa-star"></i> Reviews
-    </li>
-    <li>
-      <i class="fa fa-user"></i> Profile
-    </li>
-    <li onclick="logout()">
-      <i class="fa fa-sign-out-alt"></i> Logout
-    </li>
-  </ul>
-</aside>
+// ===========================
+// ACCEPT OR DECLINE BOOKING
+// ===========================
+async function updateBooking(bookingId, status) {
+  try {
+    const response = await fetch(`${API_URL}/api/bookings/${bookingId}/status`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status })
+    });
 
-<!-- Main -->
-<main class="dashboard-content">
+    const data = await response.json();
 
-  <div class="dashboard-header">
-    <h1>Welcome back, DJ Kev 👋</h1>
-    <p>Here's what's happening with your business today.</p>
-  </div>
+    if (!response.ok) {
+      alert('Failed to update booking.');
+      return;
+    }
 
-  <!-- Stats -->
-  <div class="stats-grid">
+    alert(`Booking ${status} successfully!`);
+    loadVendorBookings();
 
-    <div class="stat-card">
-      <i class="fa fa-envelope-open"></i>
-      <h2 id="statPending">0</h2>
-      <p>Pending Requests</p>
-    </div>
+  } catch (err) {
+    console.error('Error updating booking:', err);
+  }
+}
 
-    <div class="stat-card">
-      <i class="fa fa-calendar-check"></i>
-      <h2 id="statTotal">0</h2>
-      <p>Total Bookings</p>
-    </div>
+// ===========================
+// LOAD VENDOR STATS
+// ===========================
+async function loadVendorStats() {
+  const user = JSON.parse(localStorage.getItem('user'));
+  if (!user) return;
 
-    <div class="stat-card">
-      <i class="fa fa-star"></i>
-      <h2>4.8</h2>
-      <p>Average Rating</p>
-    </div>
+  try {
+    const response = await fetch(`${API_URL}/api/bookings/vendor/${user.id}`);
+    const bookings = await response.json();
 
-    <div class="stat-card">
-      <i class="fa fa-eye"></i>
-      <h2>230</h2>
-      <p>Profile Views</p>
-    </div>
+    const total = bookings.length;
+    const pending = bookings.filter(b => b.status === 'pending').length;
 
-  </div>
+    const totalEl = document.getElementById('statTotal');
+    const pendingEl = document.getElementById('statPending');
 
-  <!-- Upcoming Bookings -->
-  <div class="dashboard-card">
-    <h2>Upcoming Bookings</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Customer</th>
-          <th>Event</th>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="bookingsTableBody">
-        <tr>
-          <td colspan="5" style="text-align:center;color:#888;">Loading bookings...</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    if (totalEl) totalEl.textContent = total;
+    if (pendingEl) pendingEl.textContent = pending;
 
-  <!-- Services -->
-  <div class="dashboard-card">
-    <div class="card-header">
-      <h2>My Services</h2>
-      <button class="btn-view">Edit Services</button>
-    </div>
-    <div class="service-row">
-      <span>Wedding DJ Set</span>
-      <strong>150,000 RWF</strong>
-    </div>
-    <div class="service-row">
-      <span>Birthday Party DJ</span>
-      <strong>80,000 RWF</strong>
-    </div>
-    <div class="service-row">
-      <span>Corporate Event DJ</span>
-      <strong>120,000 RWF</strong>
-    </div>
-  </div>
+  } catch (err) {
+    console.error('Error loading stats:', err);
+  }
+}
 
-  <!-- Reviews -->
-  <div class="dashboard-card">
-    <h2>Recent Reviews</h2>
-    <div class="review-item">
-      ★★★★★
-      <p>DJ Kev kept our guests dancing all night. Highly recommended!</p>
-    </div>
-    <div class="review-item">
-      ★★★★★
-      <p>Very professional and easy to work with.</p>
-    </div>
-    <div class="review-item">
-      ★★★★☆
-      <p>Great music selection and excellent communication.</p>
-    </div>
-  </div>
+// ===========================
+// SMOOTH SCROLL SIDEBAR
+// ===========================
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 
-</main>
-
-</div>
-</div>
-</section>
-
-<script src="../js/dashboard.js"></script>
-<script src="../js/main.js"></script>
-
-</body>
-</html>
+// Load on page open
+loadVendorBookings();
+loadVendorStats();
