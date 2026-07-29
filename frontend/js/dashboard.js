@@ -1,5 +1,3 @@
-const API_URL = 'https://partylink-backend.onrender.com';
-
 // ===========================
 // SIDEBAR MENU TAB SWITCHING
 // ===========================
@@ -60,7 +58,7 @@ async function loadVendorBookings() {
 // ===========================
 async function updateBooking(bookingId, status) {
   try {
-    const response = await fetch(`http://localhost:5000/api/bookings/${bookingId}/status`, {
+    const response = await fetch(`${API_URL}/api/bookings/${bookingId}/status`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ status })
@@ -89,7 +87,7 @@ async function loadVendorStats() {
   if (!user) return;
 
   try {
-    const response = await fetch(`http://localhost:5000/api/bookings/vendor/${user.id}`);
+    const response = await fetch(`${API_URL}/api/bookings/vendor/${user.id}`);
     const bookings = await response.json();
 
     const total = bookings.length;
