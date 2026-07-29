@@ -1,5 +1,5 @@
 // ===========================
-// SEARCH BAR — HOMEPAGE
+// Search bar home page
 // ===========================
 const searchBtn = document.querySelector('.search-btn');
 const searchInput = document.querySelector('.search-input');
@@ -27,7 +27,7 @@ if (searchInput) {
 }
 
 // ===========================
-// NAVBAR — SCROLL SHADOW
+// Navbar scroll shadow
 // ===========================
 const navbar = document.querySelector('.navbar');
 
@@ -42,7 +42,7 @@ if (navbar) {
 }
 
 // ===========================
-// NAVBAR — AUTH STATE
+// Navbar auth
 // ===========================
 const user = JSON.parse(localStorage.getItem('user'));
 

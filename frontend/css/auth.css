@@ -1,5 +1,5 @@
 /* ===========================
-   AUTH PAGES (Login & Register)
+   Auth pages (Login & Register)
 =========================== */
 
 .auth-section {
@@ -234,7 +234,7 @@
   }
 }
 /* ===========================
-   ROLE SELECTOR (Register page)
+   Role selector (Register page)
 =========================== */
 .role-selector {
   display: grid;

@@ -1,5 +1,5 @@
 /* ===========================
-   PAGE HEADER
+   Page header
 =========================== */
 .page-header {
   background-color: #fff8f5;
@@ -21,7 +21,7 @@
 }
 
 /* ===========================
-   FILTERS
+   Filters
 =========================== */
 .filters-section {
   background-color: #ffffff;
@@ -94,7 +94,7 @@
 }
 
 /* ===========================
-   RESULTS COUNT
+   Results count
 =========================== */
 .results-count {
   font-size: 14px;
@@ -103,7 +103,7 @@
 }
 
 /* ===========================
-   VENDORS SECTION
+   Vendors
 =========================== */
 .vendors-section {
   padding: 16px 0 80px;
@@ -133,7 +133,7 @@
 }
 
 /* ===========================
-   RESPONSIVE
+   Responsiveness
 =========================== */
 @media (max-width: 900px) {
   .vendor-grid {

@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../db');
 
 // ===========================
-// CREATE BOOKING
+// Create booking
 // ===========================
 router.post('/create', async (req, res) => {
   const { customer_id, vendor_id, service_id, event_date, event_type, guest_count, notes, total_price } = req.body;
@@ -31,7 +31,7 @@ router.post('/create', async (req, res) => {
 });
 
 // ===========================
-// GET ALL BOOKINGS FOR A VENDOR
+// Get all bookings for a vendor
 // ===========================
 router.get('/vendor/:vendor_id', async (req, res) => {
   const { vendor_id } = req.params;
@@ -54,7 +54,7 @@ router.get('/vendor/:vendor_id', async (req, res) => {
 });
 
 // ===========================
-// GET ALL BOOKINGS FOR A CLIENT
+// Get all bookings for a client
 // ===========================
 router.get('/client/:customer_id', async (req, res) => {
   const { customer_id } = req.params;
@@ -77,7 +77,7 @@ router.get('/client/:customer_id', async (req, res) => {
 });
 
 // ===========================
-// UPDATE BOOKING STATUS
+// Update booking status
 // ===========================
 router.patch('/:id/status', async (req, res) => {
   const { id } = req.params;

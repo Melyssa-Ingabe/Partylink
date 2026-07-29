@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../db');
 
 // ===========================
-// GET ALL VENDORS
+// Get all vendors
 // ===========================
 router.get('/', async (req, res) => {
   try {
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 });
 
 // ===========================
-// GET SINGLE VENDOR BY ID
+// Get single vendor by ID
 // ===========================
 router.get('/:id', async (req, res) => {
   const { id } = req.params;
@@ -67,7 +67,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // ===========================
-// CREATE VENDOR PROFILE
+// Create vendor profile
 // ===========================
 router.post('/create', async (req, res) => {
   const { user_id, business_name, description, category_id, location, pricing_info } = req.body;

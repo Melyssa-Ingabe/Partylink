@@ -3,7 +3,7 @@ const router = express.Router();
 const pool = require('../db');
 
 // ===========================
-// CREATE REVIEW
+// Create review
 // ===========================
 router.post('/create', async (req, res) => {
   const { customer_id, vendor_id, rating, comment } = req.body;
@@ -47,7 +47,7 @@ router.post('/create', async (req, res) => {
 });
 
 // ===========================
-// GET ALL REVIEWS FOR A VENDOR
+// Get all reviews for a vendor
 // ===========================
 router.get('/vendor/:vendor_id', async (req, res) => {
   const { vendor_id } = req.params;

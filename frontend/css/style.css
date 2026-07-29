@@ -1,5 +1,5 @@
 /* ===========================
-   RESET & BASE
+   Reset & base
 =========================== */
 * {
   margin: 0;
@@ -97,7 +97,7 @@ ul {
 }
 
 /* ===========================
-   HERO
+   Hero
 =========================== */
 .hero {
   background-color: #fff8f5;
@@ -171,7 +171,7 @@ ul {
 }
 
 /* ===========================
-   CATEGORIES
+   Categories
 =========================== */
 .categories {
   padding: 80px 0;
@@ -223,7 +223,7 @@ ul {
 }
 
 /* ===========================
-   HOW IT WORKS
+   How it works
 =========================== */
 .how-it-works {
   padding: 80px 0;
@@ -269,7 +269,7 @@ ul {
 }
 
 /* ===========================
-   FEATURED VENDORS
+   Featured vendors
 =========================== */
 .featured {
   padding: 80px 0;
@@ -383,7 +383,7 @@ ul {
 }
 
 /* ===========================
-   CTA BANNER
+   CTA Banner
 =========================== */
 .cta-banner {
   background-color: #e85d26;
@@ -420,7 +420,7 @@ ul {
 }
 
 /* ===========================
-   FOOTER
+   Footer
 =========================== */
 .footer {
   background-color: #1a1a1a;
@@ -478,7 +478,7 @@ ul {
 }
 
 /* ===========================
-   RESPONSIVE
+   Responsiveness
 =========================== */
 @media (max-width: 768px) {
   .hero-content h1 {

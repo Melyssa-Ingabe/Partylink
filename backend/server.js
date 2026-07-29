@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ===========================
-// MIDDLEWARE
+// Middleware
 // ===========================
 app.use(cors({
   origin: 'https://partylink-app.vercel.app',
@@ -20,14 +20,14 @@ app.use(cors({
 app.use(express.json());
 
 // ===========================
-// TEST ROUTE
+// Test route
 // ===========================
 app.get('/', (req, res) => {
   res.json({ message: 'PartyLink API is running!' });
 });
 
 // ===========================
-// ROUTES 
+// Routes
 // ===========================
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/vendors', require('./routes/vendors'));
@@ -35,7 +35,7 @@ app.use('/api/bookings', require('./routes/bookings'));
 app.use('/api/reviews', require('./routes/reviews'));
 
 // ===========================
-// START SERVER
+// Start server
 // ===========================
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

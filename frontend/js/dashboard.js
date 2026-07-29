@@ -1,5 +1,5 @@
 // ===========================
-// SIDEBAR MENU TAB SWITCHING
+// Sidebar menu tab switching
 // ===========================
 const menuItems = document.querySelectorAll('.sidebar-menu li');
 
@@ -11,7 +11,7 @@ menuItems.forEach(item => {
 });
 
 // ===========================
-// LOAD REAL BOOKINGS (Vendor)
+// Load real bookings (Vendor)
 // ===========================
 async function loadVendorBookings() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -54,7 +54,7 @@ async function loadVendorBookings() {
 }
 
 // ===========================
-// ACCEPT OR DECLINE BOOKING
+// Accept or decline booking
 // ===========================
 async function updateBooking(bookingId, status) {
   try {
@@ -80,7 +80,7 @@ async function updateBooking(bookingId, status) {
 }
 
 // ===========================
-// LOAD VENDOR STATS
+// Load vendor stats
 // ===========================
 async function loadVendorStats() {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -105,7 +105,7 @@ async function loadVendorStats() {
 }
 
 // ===========================
-// SMOOTH SCROLL SIDEBAR
+// Smooth scroll sidebar
 // ===========================
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function (e) {

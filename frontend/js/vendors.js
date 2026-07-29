@@ -1,7 +1,7 @@
 const API_URL = 'https://partylink-backend.onrender.com';
 
 // ===========================
-// VENDOR IMAGES MAP
+// Vendor images map
 // ===========================
 const vendorImages = {
   'DJ': '../images/DJ Kev.jpg',
@@ -22,7 +22,7 @@ const vendorProfiles = {
 };
 
 // ===========================
-// FETCH VENDORS FROM BACKEND
+// Fetch vendors
 // ===========================
 async function loadVendors() {
   try {
@@ -71,7 +71,7 @@ async function loadVendors() {
 }
 
 // ===========================
-// FILTER VENDORS
+// Filter vendors
 // ===========================
 function filterVendors() {
   const search = document.getElementById('searchInput').value.toLowerCase();
@@ -115,7 +115,7 @@ function filterVendors() {
 }
 
 // ===========================
-// CLEAR FILTERS
+// Clear filters
 // ===========================
 function clearFilters() {
   document.getElementById('searchInput').value = '';

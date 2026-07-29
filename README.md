@@ -2,14 +2,14 @@
 
 **PartyLink** is a web-based marketplace that connects event service vendors — DJs, decorators, caterers, photographers, florists, and MCs — with individuals and organizations planning events across Africa, starting with Kigali, Rwanda.
 
-## 🌍 Live Demo
+## Live Demo
 - **Frontend:** https://partylink-app.vercel.app
 - **Backend API:** https://partylink-backend.onrender.com
 
 ## Neon screenshot showing that the data is coming from the backend
 frontend/images/Neon screenshot.png
 
-## 🔑 Test Accounts
+## Test Accounts
 
 **Client Account:**
 - Email: `aline@gmail.com`
@@ -24,13 +24,13 @@ frontend/images/Neon screenshot.png
 - Password: `password123`
 - Access: Admin Dashboard at `/pages/admin-dashboard.html`
 
-## 👤 Author
+## Author
 Melyssa Ingabe — African Leadership University (ALU)
 
-## 🎯 Mission
+## Mission
 This project falls under ALU's **Job Creation** GCGO. PartyLink aims to digitize and formalize the informal event services industry in Africa by giving vendors a professional online presence and clients a reliable way to find and book services.
 
-## 🛠️ Tech Stack
+## Tech Stack
 **Frontend:**
 - HTML, CSS, JavaScript
 - Hosted on Vercel
@@ -42,7 +42,7 @@ This project falls under ALU's **Job Creation** GCGO. PartyLink aims to digitize
 - bcrypt for password hashing
 - Hosted on Render
 
-## 📁 Project Structure
+## Project Structure
 partylink/
 ├── frontend/
 │ ├── css/
@@ -61,7 +61,7 @@ partylink/
 │ └── server.js
 └── README.md
 
-## ✨ Features
+## Features
 - Browse and search event vendors by category, location, and rating
 - Vendor profiles with services, portfolio, and reviews
 - User registration and login (client and vendor roles)
@@ -70,7 +70,7 @@ partylink/
 - Admin dashboard for platform moderation
 - Fully responsive on mobile and desktop
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js v18+
@@ -90,7 +90,7 @@ npm run dev
 ### Frontend Setup
 Open `frontend/index.html` with Live Server in VS Code.
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Auth
 - `POST /api/auth/register` — Register a new user
@@ -111,5 +111,5 @@ Open `frontend/index.html` with Live Server in VS Code.
 - `POST /api/reviews/create` — Submit a review
 - `GET /api/reviews/vendor/:id` — Get all reviews for a vendor
 
-## 📄 License
+## License
 This project was built as part of the ALU Software Engineering program.
