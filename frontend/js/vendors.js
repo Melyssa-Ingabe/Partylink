@@ -1,5 +1,3 @@
-const API_URL = 'https://partylink-backend.onrender.com';
-
 // ===========================
 // Vendor images map
 // ===========================
